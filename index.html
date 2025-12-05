@@ -61,9 +61,237 @@
     </div>
   </section>
   
+  <!-- Organizers & Event Info -->
+  <section id="organizers" class="section organizers" aria-labelledby="organizers-heading">
+    <div class="container">
+      <header style="width:100%; margin-bottom:1rem;">
+        <h2 id="organizers-heading">Organizers & Event Info</h2>
+        <p class="lead">Meet the team behind GameJam Dalarna and learn the essential event details.</p>
+      </header>
+
+      <div class="organizers__grid">
+        <article class="organizer">
+          <div class="organizer__avatar" aria-hidden="true">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <rect width="72" height="72" rx="12" fill="url(#g)" />
+              <g fill="#fff" opacity="0.06"><circle cx="36" cy="26" r="12" /><rect x="16" y="44" width="40" height="10" rx="4"/></g>
+              <defs><linearGradient id="g" x1="0" x2="72" y1="0" y2="72" gradientUnits="userSpaceOnUse"><stop stop-color="#2A2A2A"/><stop offset="1" stop-color="#111111"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="organizer__info">
+            <h3>Alex "Lead" Andersson</h3>
+            <p class="role">Head Organizer</p>
+            <p class="bio">Alex coordinates the event and partnerships. Loves rapid prototyping and pixel art.</p>
+          </div>
+        </article>
+
+        <article class="organizer">
+          <div class="organizer__avatar" aria-hidden="true">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <rect width="72" height="72" rx="12" fill="url(#g2)" />
+              <g fill="#fff" opacity="0.06"><circle cx="36" cy="26" r="12" /><rect x="16" y="44" width="40" height="10" rx="4"/></g>
+              <defs><linearGradient id="g2" x1="0" x2="72" y1="0" y2="72" gradientUnits="userSpaceOnUse"><stop stop-color="#1F5B6F"/><stop offset="1" stop-color="#112B3A"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="organizer__info">
+            <h3>Maria Svensk</h3>
+            <p class="role">Community &amp; Marketing</p>
+            <p class="bio">Maria runs communications and handles social channels and community support.</p>
+          </div>
+        </article>
+
+        <article class="organizer">
+          <div class="organizer__avatar" aria-hidden="true">
+            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <rect width="72" height="72" rx="12" fill="url(#g3)" />
+              <g fill="#fff" opacity="0.06"><circle cx="36" cy="26" r="12" /><rect x="16" y="44" width="40" height="10" rx="4"/></g>
+              <defs><linearGradient id="g3" x1="0" x2="72" y1="0" y2="72" gradientUnits="userSpaceOnUse"><stop stop-color="#6B21A8"/><stop offset="1" stop-color="#4A0F6B"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="organizer__info">
+            <h3>Oskar Nilsson</h3>
+            <p class="role">Tech &amp; Ops</p>
+            <p class="bio">Oskar looks after infrastructure, registration systems and the judging pipeline.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="event__info">
+        <h4>Event Details</h4>
+        <ul>
+          <li><strong>Date:</strong> March 14–16, 2026</li>
+          <li><strong>Location:</strong> Folkets Hus, Dalarna (on-site)</li>
+          <li><strong>Format:</strong> 48-hour in-person game jam with remote options</li>
+          <li><strong>Who can join:</strong> Developers, artists, designers and curious makers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule with Tabs -->
+  <section id="schedule" class="section schedule" aria-labelledby="schedule-heading">
+    <div class="container">
+      <header style="width:100%; margin-bottom:1rem;">
+        <h2 id="schedule-heading">Event Schedule</h2>
+        <p class="lead">Three-day overview — switch tabs to view each day's timetable.</p>
+      </header>
+
+      <div class="tabs" role="tablist" aria-label="Schedule Tabs">
+        <button class="tab-btn is-active" role="tab" aria-selected="true" aria-controls="day1" id="tab-day1">Day 1</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="day2" id="tab-day2">Day 2</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="day3" id="tab-day3">Day 3</button>
+      </div>
+
+      <div class="tab-panels">
+        <div id="day1" class="tab-panel" role="tabpanel" aria-labelledby="tab-day1">
+          <h3>Day 1 — Kickoff & Team Formation</h3>
+          <div class="timetable" role="list" aria-label="Day 1 schedule">
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-14T09:00">09:00</time></div>
+              <div class="activity">Registration &amp; Breakfast</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-14T10:00">10:00</time></div>
+              <div class="activity">Opening Talks &amp; Theme Reveal</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-14T11:00">11:00</time></div>
+              <div class="activity">Team Formation &amp; Idea Pitches</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-14T12:00">12:00</time></div>
+              <div class="activity">Start of Jam — Begin Development</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-14T18:00">18:00</time></div>
+              <div class="activity">Mentor Session: Game Design Q&amp;A</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-14T21:00">21:00</time></div>
+              <div class="activity">Optional Lightning Talks / Social</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="day2" class="tab-panel is-hidden" role="tabpanel" aria-labelledby="tab-day2">
+          <h3>Day 2 — Build &amp; Iterate</h3>
+          <div class="timetable" role="list" aria-label="Day 2 schedule">
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-15T09:00">09:00</time></div>
+              <div class="activity">Check-in &amp; Standups</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-15T10:00">10:00</time></div>
+              <div class="activity">Focused Development</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-15T14:00">14:00</time></div>
+              <div class="activity">Playtesting Sessions</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-15T17:00">17:00</time></div>
+              <div class="activity">Mentor Reviews</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-15T22:00">22:00</time></div>
+              <div class="activity">Late-night Build Push</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="day3" class="tab-panel is-hidden" role="tabpanel" aria-labelledby="tab-day3">
+          <h3>Day 3 — Finalize &amp; Showcase</h3>
+          <div class="timetable" role="list" aria-label="Day 3 schedule">
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-16T09:00">09:00</time></div>
+              <div class="activity">Final Polish</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-16T11:00">11:00</time></div>
+              <div class="activity">Submission Deadline</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-16T13:00">13:00</time></div>
+              <div class="activity">Play Demos &amp; Presentations</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-16T15:30">15:30</time></div>
+              <div class="activity">Judging &amp; Deliberation</div>
+            </div>
+
+            <div class="schedule-item" role="listitem">
+              <div class="time-cell"><time datetime="2026-03-16T17:00">17:00</time></div>
+              <div class="activity">Awards &amp; Closing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 GameJam. All rights reserved.</p>
   </footer>
+  
+  <script>
+    // Nav toggle
+    (function(){
+      const toggle = document.querySelector('.nav__toggle');
+      const nav = document.querySelector('.nav');
+      const links = document.getElementById('nav-links');
+      if(toggle && nav && links){
+        toggle.addEventListener('click', ()=>{
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('open');
+          // show/hide links
+          if(!expanded){ links.style.display = 'flex'; } else { links.style.display = ''; }
+        });
+      }
+    })();
+
+    // Tabs for schedule
+    (function(){
+      const tabBtns = Array.from(document.querySelectorAll('.tab-btn'));
+      const panels = Array.from(document.querySelectorAll('.tab-panel'));
+
+      function activate(btn){
+        tabBtns.forEach(b=>{
+          const panel = document.getElementById(b.getAttribute('aria-controls'));
+          if(b === btn){
+            b.classList.add('is-active');
+            b.setAttribute('aria-selected','true');
+            if(panel){ panel.classList.remove('is-hidden'); }
+          } else {
+            b.classList.remove('is-active');
+            b.setAttribute('aria-selected','false');
+            if(panel){ panel.classList.add('is-hidden'); }
+          }
+        });
+      }
+
+      tabBtns.forEach(btn=>{
+        btn.addEventListener('click', ()=> activate(btn));
+        btn.addEventListener('keydown', (e)=>{
+          const idx = tabBtns.indexOf(btn);
+          if(e.key === 'ArrowRight') tabBtns[(idx+1)%tabBtns.length].focus();
+          if(e.key === 'ArrowLeft') tabBtns[(idx-1+tabBtns.length)%tabBtns.length].focus();
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

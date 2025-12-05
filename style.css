@@ -42,10 +42,16 @@
     @keyframes navFade{ from{ opacity:0; transform:translateY(-6px);} to{ opacity:1; transform:none; } }
     /* Hero Section */
     :root{
+      /* Core palette */
       --accent:#6b21a8;
       --accent-2:#ff5a5f;
+      --accent-3:#1fb6ff;
+      --muted:#9aa0b4;
+      --surface:rgba(255,255,255,0.03);
+      --glass: rgba(255,255,255,0.02);
       --bg-dark:rgba(0,0,0,0.5);
       --max-width:1200px;
+      --section-pad:3rem;
     }
 
     .hero{
@@ -66,6 +72,31 @@
       filter:contrast(1.05) saturate(1.05);
       z-index:0;
     }
+
+    /* Section backgrounds and theming */
+    body{ background:linear-gradient(180deg,#050508 0%, #0b0b11 55%); color: #e6e9f2; }
+
+    /* Ensure headings and emphasized text are light (no black) */
+    h1,h2,h3,h4,h5,h6{ color: #ffffff; }
+    p, li, a, strong, span { color: #e6e9f2; }
+
+    /* Organizers section gets a teal/purple gradient */
+    .section.organizers{ background: linear-gradient(135deg, rgba(18,12,28,0.6), rgba(14,22,38,0.6)); border-top:1px solid rgba(255,255,255,0.02); }
+    .section.organizers .organizer{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(6,6,10,0.04)); }
+
+    /* Schedule section uses a subtle pattern & different gradient */
+    .section.schedule{
+      background:
+        radial-gradient(circle at 10% 10%, rgba(31,182,255,0.04) 0 8%, transparent 30%),
+        linear-gradient(180deg, rgba(2,8,23,0.55), rgba(12,6,20,0.6));
+      border-top:1px solid rgba(255,255,255,0.02);
+    }
+
+    /* Add section separators for visual rhythm */
+    .section + .section{ border-top: 1px solid rgba(255,255,255,0.02); }
+
+    /* Footer with darker contrasting background */
+    footer{ background:linear-gradient(180deg,#05040a,#07050b); border-top:1px solid rgba(255,255,255,0.03); }
 
     .container{
       position:relative;
@@ -173,4 +204,89 @@
       .hero__title{ font-size:1.8rem; }
       .hero__cta{ flex-direction:column; width:100%; }
       .btn{ width:100%; }
+    }
+
+    /* Organizers & Event Info */
+    .section{ padding:var(--section-pad) 0; }
+    .section h2{ margin:0 0 0.4rem 0; font-size:1.6rem; }
+    .lead{ color:rgba(255,255,255,0.85); margin:0 0 1rem 0; }
+
+    .organizers__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-bottom:1.25rem; }
+    .organizer{ background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06)); padding:1rem; border-radius:10px; display:flex; gap:0.75rem; align-items:flex-start; }
+    .organizer__avatar{ width:64px; height:64px; border-radius:12px; background:linear-gradient(135deg,#2a2a2a,#111); flex-shrink:0; }
+      /* Organizers layout: header spans, content uses two-column layout on wide screens */
+      .section.organizers .container{ display:grid; grid-template-columns: 1fr 320px; gap:1.25rem; align-items:start; }
+      .section.organizers header{ grid-column:1/-1; }
+
+      .organizers__grid{ display:flex; flex-direction:column; gap:1rem; margin-bottom:0; }
+      .organizer{ background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04)); padding:1rem; border-radius:12px; display:flex; gap:1rem; align-items:flex-start; box-shadow:0 8px 30px rgba(2,6,23,0.45); border:1px solid rgba(255,255,255,0.02); }
+      .organizer__avatar{ width:72px; height:72px; border-radius:14px; background:linear-gradient(135deg,#2a2a2a,#111); flex-shrink:0; }
+    .organizer__info h3{ margin:0 0 0.15rem 0; font-size:1.05rem; }
+    .organizer .role{ margin:0 0 0.5rem 0; font-size:0.85rem; color:rgba(255,255,255,0.7); font-weight:700; }
+    .organizer .bio{ margin:0; color:rgba(255,255,255,0.85); }
+      .organizer__info h3{ margin:0 0 0.15rem 0; font-size:1.08rem; }
+      .organizer .role{ margin:0 0 0.5rem 0; font-size:0.9rem; color:var(--muted); font-weight:800; }
+      .organizer .bio{ margin:0; color: #dfe3f8; }
+
+    .event__info{ margin-top:1rem; padding:0.9rem; border-radius:8px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.03); }
+    .event__info ul{ margin:0; padding-left:1.15rem; }
+      .event__info{ margin-top:0; padding:1rem; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04)); border:1px solid rgba(255,255,255,0.03); box-shadow:0 8px 30px rgba(2,6,23,0.45); }
+      .event__info ul{ margin:0; padding-left:1.1rem; }
+      .event__info li{ margin-bottom:0.5rem; }
+
+    /* Schedule / Tabs */
+    .tabs{ display:flex; gap:0.5rem; margin-bottom:1rem; }
+    .tab-btn{ background:transparent; color:rgba(255,255,255,0.9); border:1px solid rgba(255,255,255,0.04); padding:0.5rem 0.9rem; border-radius:10px; cursor:pointer; font-weight:800; }
+    .tab-btn.is-active{ background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#fff; box-shadow:0 8px 30px rgba(107,33,168,0.18); transform:translateY(-2px); }
+    .tab-panels{ margin-top:0.75rem; }
+    .tab-panel{ background:rgba(255,255,255,0.02); padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.03); }
+    .tab-panel.is-hidden{ display:none; }
+
+      .tab-panel{ background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03)); padding:1.25rem; border-radius:12px; border:1px solid rgba(255,255,255,0.03); box-shadow:0 10px 40px rgba(2,6,23,0.45); }
+      .tab-panel.is-hidden{ display:none; }
+
+      /* Schedule: card-like items for readability (semantic list) */
+      .timetable{ width:100%; margin-top:0.6rem; display:flex; flex-direction:column; gap:0.6rem; }
+      .schedule-item{ display:grid; grid-template-columns:120px 1fr; gap:1rem; align-items:start; padding:0.9rem; border-radius:10px; background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); box-shadow:0 8px 30px rgba(2,6,23,0.35); transition:transform .18s ease, box-shadow .18s ease; }
+      .schedule-item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(2,6,23,0.5); }
+      .time-cell{ font-weight:900; color:var(--accent-3); background:rgba(255,255,255,0.02); padding:0.45rem 0.6rem; border-radius:8px; display:inline-block; }
+      .schedule-item .activity{ font-size:1rem; line-height:1.4; color:#e6e9f2; }
+      .schedule-item .activity small{ display:block; color:var(--muted); margin-top:0.25rem; font-weight:600; }
+
+      /* Small screens: stack time above activity */
+      @media (max-width:620px){
+        .schedule-item{ grid-template-columns:1fr; }
+        .time-cell{ margin-bottom:0.4rem; color:var(--accent-2); }
+      }
+
+      /* Subtle entrance animations */
+      .section{ opacity:0; transform:translateY(10px); animation:fadeUp .6s ease forwards; }
+      .section:nth-of-type(1){ animation-delay:0.05s; }
+      .section:nth-of-type(2){ animation-delay:0.12s; }
+      .section:nth-of-type(3){ animation-delay:0.18s; }
+      @keyframes fadeUp{ to{ opacity:1; transform:none; } }
+
+    /* Redesigned timetable: rows display as two-column cards for readability */
+    .timetable{ width:100%; border-collapse:separate; margin-top:0.5rem; }
+    .timetable thead{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .timetable tbody{ display:block; }
+    .timetable tbody tr{ display:grid; grid-template-columns:140px 1fr; gap:1rem; align-items:center; padding:0.6rem; border-top:1px solid rgba(255,255,255,0.03); }
+    .timetable tbody tr .time-cell, .timetable tbody tr td:first-child{ font-weight:800; color:var(--accent-3); }
+    .timetable tbody tr td{ padding:0; color: #e6e9f2; }
+    .timetable tbody tr:nth-child(even){ background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent); }
+
+    /* Mobile: stack time above activity */
+    @media (max-width:620px){
+      .timetable tbody tr{ grid-template-columns:1fr; }
+      .timetable tbody tr .time-cell, .timetable tbody tr td:first-child{ margin-bottom:0.2rem; color:var(--accent-2); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width:900px){
+      .organizers__grid{ grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width:620px){
+      .organizers__grid{ grid-template-columns:1fr; }
+      .tab-btn{ flex:1 1 auto; }
+      .tabs{ flex-direction:row; overflow:auto; }
     }
