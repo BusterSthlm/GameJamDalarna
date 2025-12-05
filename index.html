@@ -30,9 +30,35 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to GameJam 2025</h1>
-    <p>Join us in creating, playing, and celebrating amazing indie games!</p>
+  <section class="hero" aria-label="Main hero">
+    <div class="hero__bg" role="img" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="eyebrow">GameJam Dalarna</div>
+        <h1 class="hero__title">Create. Play. Compete.</h1>
+        <p class="hero__subtitle">A 48-hour game development sprint — bring your ideas to life, meet other devs, and ship something memorable.</p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#register" aria-label="Register for GameJam">Register Now</a>
+          <a class="btn btn--ghost" href="#about" aria-label="Learn more about GameJam">Learn More</a>
+        </div>
+
+        <ul class="hero__stats">
+          <li><strong>48h</strong><span>Time Limit</span></li>
+          <li><strong>Teams</strong><span>Solo or Group</span></li>
+          <li><strong>Prizes</strong><span>Sponsored Awards</span></li>
+        </ul>
+      </div>
+
+      <aside class="hero__card" aria-hidden="false">
+        <div class="card__media" aria-hidden="true"></div>
+        <div class="card__meta">
+          <div class="card__title">Featured Game</div>
+          <div class="card__desc">Sneak peek from last year — voted crowd favourite.</div>
+          <a class="btn btn--mini" href="#games">Play Demo</a>
+        </div>
+      </aside>
+    </div>
   </section>
   
   <!-- Footer -->
